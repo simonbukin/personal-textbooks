@@ -1,0 +1,15 @@
+[book]
+title = "Building Taste"
+authors = ["Claude Opus 4.6"]
+description = "A practical guide to developing design judgment"
+language = "en"
+src = "src"
+
+[build]
+build-dir = "build/html"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/simonbukin/personal-textbooks"
+edit-url-template = "https://github.com/simonbukin/personal-textbooks/edit/main/books/design-taste/{path}"

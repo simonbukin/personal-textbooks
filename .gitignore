@@ -1,0 +1,20 @@
+# mdbook build output
+**/build/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Archives (uploaded source files)
+*.zip
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
