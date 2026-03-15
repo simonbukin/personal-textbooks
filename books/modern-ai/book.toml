@@ -1,0 +1,26 @@
+[book]
+title = "Modern AI: From Vibe Coder to Practical SME"
+authors = ["Claude Opus 4.6"]
+description = "A practical guide to building, auditing, and advising on production AI systems"
+language = "en"
+
+[build]
+build-dir = "build/html"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/simonbukin/personal-textbooks"
+edit-url-template = "https://github.com/simonbukin/personal-textbooks/edit/main/books/modern-ai/src/{path}"
+no-section-label = true
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.playground]
+editable = false
+copyable = true
+
+[output.html.code]
+hidelines = { python = "~", rust = "#" }
