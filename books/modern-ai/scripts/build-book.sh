@@ -120,18 +120,47 @@ build_mdbook() {
     fi
 }
 
+# Build EPUB
+build_epub() {
+    echo ""
+    echo -e "${YELLOW}Generating EPUB...${NC}"
+
+    pandoc "$OUTPUT_MD" \
+        -o "$OUTPUT_EPUB" \
+        --toc \
+        --toc-depth=2 \
+        --highlight-style=tango \
+        --metadata title="Modern AI: From Vibe Coder to Practical SME" \
+        --metadata author="Claude Opus 4.6" \
+        --metadata lang="en" \
+        --split-level=1
+
+    if [ -f "$OUTPUT_EPUB" ]; then
+        epub_size=$(du -h "$OUTPUT_EPUB" | cut -f1)
+        echo -e "${GREEN}EPUB generated:${NC} $OUTPUT_EPUB ($epub_size)"
+    else
+        echo -e "${RED}EPUB generation failed.${NC}"
+        return 1
+    fi
+}
+
 # Main
 case "$FORMAT" in
+    epub)
+        create_combined_markdown
+        build_epub
+        ;;
     mdbook)
         build_mdbook
         ;;
     all)
         create_combined_markdown
+        build_epub
         build_mdbook
         ;;
     *)
         echo -e "${RED}Unknown format: $FORMAT${NC}"
-        echo "Usage: $0 [mdbook|all]"
+        echo "Usage: $0 [epub|mdbook|all]"
         exit 1
         ;;
 esac
