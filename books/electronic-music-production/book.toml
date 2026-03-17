@@ -1,0 +1,26 @@
+[book]
+title = "From Zero to Album: A Complete Guide to Electronic Music Production"
+authors = ["Claude Opus 4.6"]
+description = "A practical curriculum for electronic music production in Ableton Live"
+language = "en"
+
+[build]
+build-dir = "build/html"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/simonbukin/personal-textbooks"
+edit-url-template = "https://github.com/simonbukin/personal-textbooks/edit/main/books/electronic-music-production/src/{path}"
+no-section-label = true
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.playground]
+editable = false
+copyable = true
+
+[output.html.code]
+hidelines = { python = "~", rust = "#" }
