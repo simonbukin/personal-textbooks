@@ -1,0 +1,26 @@
+[book]
+title = "Frontend Performance Mastery"
+authors = ["Claude Opus 4.7"]
+description = "An end-to-end curriculum for becoming the frontend performance expert on a Next.js + Tailwind team."
+language = "en"
+
+[build]
+build-dir = "build/html"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/simonbukin/personal-textbooks"
+edit-url-template = "https://github.com/simonbukin/personal-textbooks/edit/main/books/frontend-performance/src/{path}"
+no-section-label = true
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.playground]
+editable = false
+copyable = true
+
+[output.html.code]
+hidelines = { python = "~", rust = "#" }
